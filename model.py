@@ -85,7 +85,7 @@ class denoiser(object):
         # make summary
         tf.summary.scalar('loss', self.loss)
         tf.summary.scalar('lr', self.lr)
-        writer = tf.summary.FileWriter('./logs', self.sess.graph)
+        writer = tf.summary.FileWriter('/home/ruilan2/scratch/result01/logs', self.sess.graph)
         merged = tf.summary.merge_all()
         summary_psnr = tf.summary.scalar('eva_psnr', self.eva_psnr)
         print("[*] Start training, with start epoch %d start iter %d : " % (start_epoch, iter_num))

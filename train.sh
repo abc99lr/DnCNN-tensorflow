@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-python3 main.py --epoch 50 \
+python3 main.py --epoch 10 \
                 --batch_size 128 \
                 --lr 0.001 \
                 --use_gpu 1 \
