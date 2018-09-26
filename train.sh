@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 python3 main.py --epoch 10 \
-                --batch_size 128 \
+                --batch_size 32 \
                 --lr 0.001 \
                 --use_gpu 1 \
                 --sigma 25 \

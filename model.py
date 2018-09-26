@@ -96,7 +96,7 @@ class denoiser(object):
             np.random.shuffle(data)
             for batch_id in range(start_step, numBatch):
                 batch_images = data[batch_id * batch_size:(batch_id + 1) * batch_size, :, :, :]
-                # batch_images = batch_images.astype(np.float32) / 255.0 # normalize the data to 0-1
+                batch_images = batch_images.astype(np.float32) / 255.0 # normalize the data to 0-1
                 _, loss, summary = self.sess.run([self.train_op, self.loss, merged],
                                                  feed_dict={self.Y_: batch_images, self.lr: lr[epoch],
                                                             self.is_training: True})
