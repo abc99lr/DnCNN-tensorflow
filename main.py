@@ -22,7 +22,7 @@ args = parser.parse_args()
 
 
 def denoiser_train(denoiser, lr):
-    with load_data(filepath='/home/ruilan2/scratch/img_clean_pats.npy') as data:
+    with load_data(filepath='/home/ruilan2/scratch/img_clean_pats_b128.npy') as data:
         # if there is a small memory, please comment this line and uncomment the line99 in model.py
         # data = data.astype(np.float32) / 255.0  # normalize the data to 0-1
         eval_files = glob('{}/*.png'.format(args.eval_set))
